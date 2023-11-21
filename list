@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Shopping List</title>
+        <style>
+            body {
+                font-family: 'Courier New', Courier, monospace;
+                font-weight: 900;
+                background-color: #f5f5f5;
+                text-align: center;
+                border: 12px #bda9e3 solid;
+                max-width: 1400px;
+                padding: 20px;
+                display: block;
+                margin: 0 auto;
+            }
+
+            h1 {
+                font-family: 'Courier New', Courier, monospace;
+                font-size: 46px;
+                background: linear-gradient(to right, #ff6ec4, #8a63d2);
+                -webkit-background-clip: text;
+                /* For older webkit browsers */
+                -moz-background-clip: text;
+                /* For Firefox */
+                background-clip: text;
+                color: transparent;
+            }
+
+            ul {
+                list-style: none;
+                padding: 0;
+            }
+
+            li {
+                display: flex;
+                align-items: center;
+                padding: 10px;
+                border-bottom: 1px solid #ddd;
+                transition: background-color 0.3s;
+                font-size: 36px;
+
+            }
+
+            li:hover {
+                background-color: #f0f0f0;
+
+                background: linear-gradient(to right, #f58ca4, #b697d1);
+            }
+
+
+            label {
+                flex: 1;
+            }
+
+            input[type="checkbox"] {
+                margin-right: 10px;
+            }
+
+            .checked {
+                text-decoration: line-through;
+                color: #aaa;
+                background-color: pink;
+            }
+
+            footer {
+                color: #aaa;
+
+            }
+
+            a {
+                color: #aaa;
+                text-decoration: none;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Shopping List</h1>
+        <ul>
+            <li><input type="checkbox"><label>Strawberries 🍓</label></li>
+            <li><input type="checkbox"><label>Porridge 🥣 </label></li>
+            <li><input type="checkbox"><label>Milk 🥛</label></li>
+            <li><input type="checkbox"><label>Apple Juice 🧃</label></li>
+            <li><input type="checkbox"><label>Chips 🍟 </label></li>
+            <li><input type="checkbox"><label>Fish 🐠</label></li>
+            <li><input type="checkbox"><label>Broccoli 🥦</label></li>
+            <li><input type="checkbox"><label>Ice Cream 🍦</label></li>
+            <li><input type="checkbox"><label>Apple Pie 🥧</label></li>
+            <li><input type="checkbox"><label>Hotdog 🌭</label></li>
+            <li><input type="checkbox"><label>Ketchup 🥫</label></li>
+            <li><input type="checkbox"><label>Pasta 🍝</label></li>
+            <li><input type="checkbox"><label>Mushroom 🍄</label></li>
+            <li><input type="checkbox"><label>Cheese 🧀</label></li>
+            <li><input type="checkbox"><label>Grapes 🍇</label></li>
+        </ul>
+        <script>
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            checkboxes.forEach(checkbox => {
+                checkbox.addEventListener('change', () => {
+                    const listItem = checkbox.parentElement;
+                    listItem.classList.toggle('checked');
+                });
+            });
+        </script>
+
+
+        <footer>&copy; 2023 Coded by <a href="https://www.linkedin.com/in/v%C3%A1leri-calhau-9279b927a/"
+                rel="noopener noreferrer" target="_blank">Váleri
+                Calhau</a></footer>
+
+
+    </body>
+
+</html>
